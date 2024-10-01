@@ -1,0 +1,225 @@
+@import url("https://fonts.cdnfonts.com/css/inter");
+
+/*Atenção professor, fui atrás de aprender mais sobre os seletores e sobre as funções de algumas propriedades para me ajudar.
+
+Acho que o uso de seletores e funções é bem interessante e pode ajudar a fazer seu código mais legível e organizado.
+
+Por exemplo, o uso de seletores como :root para acessar variáveis CSS e * para acessar todos os elementos é muito útil para centralizar as variáveis de cor e reutilizar os valores nas diferentes partes do seu CSS.
+
+Você pode ver mais exemplos de uso de seletores e funções no código que fiz e que deu trabalho, achei que não iria nem conseguir começar professor. */
+
+/* O var eu achei interessante de usar 😊 */
+
+/* Cores */
+:root {
+    --menu-text-color: #505050;
+    --button-bg-color: #2E68FF;
+    --title-color: #040315;
+    --footer-bg-color: #1A1A1A;
+    --price-color: #2E68FF;
+    --text-size: 18px;
+    --menu-size: 16px;
+    --title-large-size: 54px;
+    --subtitle-large-size: 64px;
+    --small-title-size: 20px;
+}
+
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+}
+
+/* Layout */
+.container {
+    width: 1216px;
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav a {
+    margin: 0 20px;
+    color: var(--menu-text-color);
+    font-size: var(--menu-size);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    padding: 168px 0 200px;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+    padding: 0 0 168px;
+}
+
+.product img {
+    width: 490px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.product-info {
+    padding-left: 24px;
+    color: var(--title-color);
+}
+
+.product-info h1 {
+    font-size: var(--title-large-size);
+    margin-bottom: 16px;
+}
+
+.product-info p {
+    font-size: var(--small-title-size);
+    color: var(--menu-text-color);
+    margin-bottom: 16px;
+}
+
+.product-info .price {
+    font-size: var(--subtitle-large-size);
+    color: var(--price-color);
+    margin-bottom: 32px;
+}
+
+.product-info button {
+    background-color: var(--button-bg-color);
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--text-size);
+    cursor: pointer;
+}
+
+.product-info .aviso{
+    
+    color: gray !important;
+    font-style: italic;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.featured {
+    text-align: center;
+    margin: 48px 0;
+}
+
+.featured h2 {
+    margin: 36px 0;
+    font-size: var(--subtitle-large-size);
+    color: var(--title-color);
+    margin-bottom: 24px;
+}
+
+.featured p {
+    font-size: var(--small-title-size);
+    color: var(--menu-text-color);
+    margin-bottom: 16px;
+    font-weight: bold;
+    color: #2E68FF;
+}
+
+.products-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 0;
+    padding: 0 0 200px;
+}
+
+.products-list img {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.products-list p {
+    color: var(--menu-text-color);
+    text-align: center;
+    margin-top: 16px;
+    font-size: var(--text-size);
+}
+
+/* Banner */
+/*Gosto de pesquisar mais coisas então fui atrás de saber mais propriedades para deixar o tabalho mais bem feito*/
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--button-bg-color);
+    padding: 96px;
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 32px;
+}
+
+.banner img {
+    width: 568px;
+    height: 400px;
+    border-radius: 12px;
+}
+
+.banner-text {
+    margin-left: 60px;
+    max-width: 568px;
+    font-size: 35px;
+    font-weight: bold;
+    
+}
+
+.banner-text img {
+    width: 40px;
+    height: 45px;
+    margin-right: 16px;
+}
+
+.banner-text p {
+    font-size: var(--text-size);
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--footer-bg-color);
+    color: white;
+    padding: 64px 32px 32px 64px;;
+    text-align: center;
+}
+
+.footer img {
+    font-size: 24px;  
+    padding-left: 16px;
+}
+
+.footer small {
+    padding-left: 16px;
+    
+}
+
+
+.footer nav a {
+    color: white;
+    margin: 0 16px;
+    font-size: var(--menu-size);
+}
